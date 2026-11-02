@@ -1,0 +1,27 @@
+PORTFOLIO RANYA RABIHI — où ranger chaque fichier
+(respecter EXACTEMENT les noms : minuscules, sans accents ni espaces)
+
+À la racine (à côté de index.html)
+  photo-ranya.jpg                      -> ta photo
+
+assets/
+  CV_Ranya_Rabihi.pdf                  -> ton CV
+  logo-novxtel.png                     -> logo Novxtel
+  logo-euristel.png                    -> logo Euristel
+
+certifs/
+  cisco-introduction-modern-ai.pdf
+  edflex-citoyennete-francaise.pdf
+  edflex-droits-devoirs-alternant.pdf
+  edflex-sante-securite-travail.pdf
+  edflex-aides-apprentis.pdf
+
+docs/e5/
+  tableau-de-synthese-e5.pdf
+  glpi.pdf  cahier-des-charges.pdf  incidents.pdf  deploiement.pdf  guide.pdf
+
+docs/e6/
+  tableau-de-synthese-e6.pdf
+  ad.pdf  vlan.pdf  supervision.pdf  wireguard.pdf
+
+Tester : double-clic sur index.html.
