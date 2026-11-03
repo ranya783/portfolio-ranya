@@ -276,6 +276,39 @@
       *, *::before, *::after { animation: none !important; transition: none !important; }
       .fade { opacity: 1; transform: none; }
     }
+
+    /* ---------- Veille (atelier E5) ---------- */
+    .src-table th:nth-child(2), .src-table td:nth-child(2) { text-align: left; }
+    .stars { color: var(--rose); letter-spacing: .1em; white-space: nowrap; }
+    .stars .off { color: var(--line); }
+    td a { color: var(--rose-dark); font-weight: 500; }
+    td small { display: block; color: var(--muted); font-size: .78rem; }
+    .brick { display: flex; flex-direction: column; gap: .7rem; }
+    .brick-head { display: flex; align-items: center; gap: 12px; }
+    .brick-head .theme-num { width: 50px; height: 50px; font-size: 1.4rem; border-radius: 16px; }
+    .brick-head small { display: block; font-size: .75rem; font-weight: 600; color: var(--rose-dark); text-transform: uppercase; letter-spacing: .08em; }
+    .brick-head h4 { color: var(--plum); font-size: 1.08rem; }
+    .brick p, .brick li { font-size: .9rem; color: var(--muted); }
+    .shot { border: 1.5px dashed var(--peach); border-radius: 14px; background: var(--soft-peach); aspect-ratio: 16/9; display: grid; place-items: center; overflow: hidden; margin-top: auto; }
+    .shot img { width: 100%; height: 100%; object-fit: cover; }
+    .shot-cap { font-size: .78rem; color: var(--muted); text-align: center; }
+    .strategy div { display: grid; grid-template-columns: 240px 1fr; gap: 1rem; padding: .9rem 0; border-bottom: 1px dashed var(--line); }
+    .strategy div:last-child { border-bottom: 0; }
+    .strategy dt { font-weight: 600; color: var(--plum); font-size: .92rem; }
+    .strategy dd { color: var(--muted); font-size: .92rem; }
+    .fiche { padding: 0; overflow: hidden; }
+    .fiche-top { display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 18px 24px; background: linear-gradient(135deg, var(--soft-rose), var(--soft-lilac)); flex-wrap: wrap; }
+    .fiche-top h3 { font-size: 1.1rem; color: var(--plum); }
+    .fiche-top h3 span { color: var(--rose); }
+    .fiche dl { padding: 8px 24px 20px; }
+    .fiche dl div { display: grid; grid-template-columns: 150px 1fr; gap: 1rem; padding: .7rem 0; border-bottom: 1px dashed var(--line); font-size: .9rem; }
+    .fiche dl div:last-child { border-bottom: 0; }
+    .fiche dt { font-weight: 600; color: var(--rose-dark); }
+    .fiche dd { color: var(--muted); }
+    .fiche + .fiche { margin-top: 24px; }
+    @media (max-width: 640px) {
+      .strategy div, .fiche dl div { grid-template-columns: 1fr; gap: .2rem; }
+    }
   </style>
 </head>
 <body>
