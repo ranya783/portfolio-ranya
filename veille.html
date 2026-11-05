@@ -305,6 +305,7 @@
     .fiche dl div:last-child { border-bottom: 0; }
     .fiche dt { font-weight: 600; color: var(--rose-dark); }
     .fiche dd { color: var(--muted); }
+    .fiche dd a { color: var(--rose-dark); font-weight: 500; text-decoration: underline; text-underline-offset: 3px; }
     .fiche + .fiche { margin-top: 24px; }
     @media (max-width: 640px) {
       .strategy div, .fiche dl div { grid-template-columns: 1fr; gap: .2rem; }
@@ -411,7 +412,7 @@
     <section class="section" id="strategie">
       <div class="container">
         <div class="title-wrap fade"><h2 class="title">Ma stratégie de veille</h2></div>
-        <div class="card fade" style="max-width:920px;margin:0 auto"><dl class="strategy"><div><dt>Quel est mon thème ?</dt><dd>L'intégration du protocole WireGuard sur MikroTik RouterOS v7 pour sécuriser les accès distants (VPN nomade).</dd></div><div><dt>Pourquoi ce thème ?</dt><dd>Il répond à un besoin réel de mes entreprises (Novxtel &amp; Euristel) avec le télétravail, il est relié à mon option SISR et à ma poursuite d'études en cybersécurité, et il évolue à chaque version de RouterOS.</dd></div><div><dt>Quelles sources principales ?</dt><dd>Les changelogs RouterOS et la documentation MikroTik, le CERT-FR, le forum MikroTik et BleepingComputer.</dd></div><div><dt>À quelle fréquence je consulte ?</dt><dd><span class="todo">ex. : 20 minutes, 3 fois par semaine (lundi, mercredi, vendredi)</span></dd></div><div><dt>Comment je trie et retiens l'info ?</dt><dd>Je lis les titres dans Feedly, je garde seulement ce qui concerne WireGuard, RouterOS v7 ou la sécurité des VPN, et je l'archive dans Notion avec un tag par axe.</dd></div><div><dt>Comment je restitue ?</dt><dd>Une fiche de veille par semaine, publiée sur cette page, avec ce que j'en retiens et l'action que j'ai menée.</dd></div></dl></div>
+        <div class="card fade" style="max-width:920px;margin:0 auto"><dl class="strategy"><div><dt>Quel est mon thème ?</dt><dd>L'intégration du protocole WireGuard sur MikroTik RouterOS v7 pour sécuriser les accès distants (VPN nomade).</dd></div><div><dt>Pourquoi ce thème ?</dt><dd>Il répond à un besoin réel de mes entreprises (Novxtel &amp; Euristel) avec le télétravail, il est relié à mon option SISR et à ma poursuite d'études en cybersécurité, et il évolue à chaque version de RouterOS.</dd></div><div><dt>Quelles sources principales ?</dt><dd>Les changelogs RouterOS et la documentation MikroTik, le CERT-FR, le forum MikroTik et BleepingComputer.</dd></div><div><dt>À quelle fréquence je consulte ?</dt><dd>20 minutes, 3 fois par semaine (lundi, mercredi et vendredi) sur Feedly, plus les alertes Google reçues par e-mail.</dd></div><div><dt>Comment je trie et retiens l'info ?</dt><dd>Je lis les titres dans Feedly, je garde seulement ce qui concerne WireGuard, RouterOS v7 ou la sécurité des VPN, et je l'archive dans Notion avec un tag par axe.</dd></div><div><dt>Comment je restitue ?</dt><dd>Une fiche de veille par semaine, publiée sur cette page, avec ce que j'en retiens et l'action que j'ai menée.</dd></div></dl></div>
       </div>
     </section>
 
@@ -420,52 +421,24 @@
         <div class="title-wrap fade"><h2 class="title">Mes fiches de veille</h2><p class="lead">Une fiche par semaine, écrite avec mes mots, avec l'impact et l'action menée.</p></div>
         <div class="table-wrap fade" style="margin-bottom:36px"><table>
           <thead><tr><th>Fiche</th><th>Date prévue</th><th>Date réalisée</th><th>Thème de l'article</th><th>Validée</th></tr></thead>
-          <tbody><tr><td>Fiche n°1</td><td>semaine du 2 nov. 2026</td><td><span class="todo">date</span></td><td><span class="todo">thème</span></td><td></td></tr><tr><td>Fiche n°2</td><td>semaine du 9 nov. 2026</td><td><span class="todo">date</span></td><td><span class="todo">thème</span></td><td></td></tr><tr><td>Fiche n°3</td><td>semaine du 16 nov. 2026</td><td><span class="todo">date</span></td><td><span class="todo">thème</span></td><td></td></tr><tr><td>Fiche n°4</td><td>semaine du 23 nov. 2026</td><td><span class="todo">date</span></td><td><span class="todo">thème</span></td><td></td></tr></tbody>
+          <tbody><tr><td><a href="#fiche-1">Fiche n°1</a></td><td>semaine du 2 nov. 2026</td><td><span class="todo">date</span></td><td>RouterOS 7.25 : une dizaine d'améliorations pour WireGuard</td><td></td></tr><tr><td><a href="#fiche-2">Fiche n°2</a></td><td>semaine du 9 nov. 2026</td><td><span class="todo">date</span></td><td>CVE-2026-84411 : faille critique dans l'interface web de RouterOS</td><td></td></tr><tr><td><a href="#fiche-3">Fiche n°3</a></td><td>semaine du 16 nov. 2026</td><td><span class="todo">date</span></td><td>WireGuard Easy 15.5 : les clés privées ne sont plus exposées</td><td></td></tr><tr><td><a href="#fiche-4">Fiche n°4</a></td><td>semaine du 23 nov. 2026</td><td><span class="todo">date</span></td><td><span class="todo">à venir</span></td><td></td></tr></tbody>
         </table></div>
         
         <article class="card fiche fade" id="fiche-1">
-          <div class="fiche-top"><h3><span>Fiche n°1</span> · <span class="todo">Titre de l'article</span></h3><span class="pill">semaine du 2 nov. 2026</span></div>
-          <dl>
-            <div><dt>Titre et date</dt><dd><span class="todo">Titre de l'article + date de ma lecture</span></dd></div>
-            <div><dt>Source</dt><dd><span class="todo">Lien, auteur, type de source</span></dd></div>
-            <div><dt>Résumé</dt><dd><span class="todo">5 lignes maximum, avec mes propres mots</span></dd></div>
-            <div><dt>Analyse</dt><dd><span class="todo">Pourquoi c'est important, à qui cela s'applique</span></dd></div>
-            <div><dt>Impact</dt><dd><span class="todo">Conséquence sur mon travail, mon labo, mon parcours</span></dd></div>
-            <div><dt>Action menée</dt><dd><span class="todo">Test en labo, mise à jour, discussion, décision</span></dd></div>
-          </dl>
+          <div class="fiche-top"><h3><span>Fiche n°1</span> · RouterOS 7.25 : une dizaine d'améliorations pour WireGuard</h3><span class="pills"><span class="pill lilac">Déploiement pratique</span><span class="pill">semaine du 2 nov. 2026</span></span></div>
+          <dl><div><dt>Titre et date</dt><dd>RouterOS 7.25 : une dizaine d'améliorations pour WireGuard — lu la semaine du 2 nov. 2026</dd></div><div><dt>Source</dt><dd><a href="https://forum.mikrotik.com/t/7-25-stable-is-released/273987" target="_blank" rel="noopener">Forum officiel MikroTik — « 7.25 [stable] is released! »</a>, publié le 23 octobre 2026 par l'équipe MikroTik · source constructeur · EN</dd></div><div><dt>Résumé</dt><dd>MikroTik a publié la version stable 7.25 de RouterOS. Le changelog apporte une dizaine de corrections et de nouveautés pour WireGuard : un paramètre client-mtu, la possibilité de désigner un peer par son nom, un import de fichiers de configuration plus fiable, et un avertissement quand l'adresse autorisée d'un peer chevauche celle d'un autre. Winbox affiche aussi les informations des peers.</dd></div><div><dt>Analyse</dt><dd>Ces changements réduisent les erreurs de configuration les plus courantes sur un VPN nomade qui compte beaucoup d'utilisateurs : peers mal identifiés, adresses en double. Ils concernent tous les administrateurs qui gèrent des accès distants sur MikroTik.</dd></div><div><dt>Impact</dt><dd>Chez Novxtel &amp; Euristel, ajouter un collaborateur nomade devient plus simple et plus sûr : un peer = un nom = une adresse /32. La version contient aussi des correctifs de sécurité (SSH, interface web), donc la mise à jour est doublement utile.</dd></div><div><dt>Action menée</dt><dd>Vérifier la version RouterOS du routeur de l'entreprise et proposer à mon tuteur une mise à jour vers la dernière 7.25.x, après une sauvegarde de la configuration. <span class="todo">à confirmer une fois faite</span></dd></div></dl>
         </article>
         <article class="card fiche fade" id="fiche-2">
-          <div class="fiche-top"><h3><span>Fiche n°2</span> · <span class="todo">Titre de l'article</span></h3><span class="pill">semaine du 9 nov. 2026</span></div>
-          <dl>
-            <div><dt>Titre et date</dt><dd><span class="todo">Titre de l'article + date de ma lecture</span></dd></div>
-            <div><dt>Source</dt><dd><span class="todo">Lien, auteur, type de source</span></dd></div>
-            <div><dt>Résumé</dt><dd><span class="todo">5 lignes maximum, avec mes propres mots</span></dd></div>
-            <div><dt>Analyse</dt><dd><span class="todo">Pourquoi c'est important, à qui cela s'applique</span></dd></div>
-            <div><dt>Impact</dt><dd><span class="todo">Conséquence sur mon travail, mon labo, mon parcours</span></dd></div>
-            <div><dt>Action menée</dt><dd><span class="todo">Test en labo, mise à jour, discussion, décision</span></dd></div>
-          </dl>
+          <div class="fiche-top"><h3><span>Fiche n°2</span> · CVE-2026-84411 : faille critique dans l'interface web de RouterOS</h3><span class="pills"><span class="pill lilac">Mises à jour &amp; vulnérabilités</span><span class="pill">semaine du 9 nov. 2026</span></span></div>
+          <dl><div><dt>Titre et date</dt><dd>CVE-2026-84411 : faille critique dans l'interface web de RouterOS — lu la semaine du 9 nov. 2026</dd></div><div><dt>Source</dt><dd><a href="https://www.cycognito.com/blog/emerging-threat-cve-2026-84411-mikrotik-routeros-unauthenticated-root-rce-via-web-management/" target="_blank" rel="noopener">CyCognito — « Emerging Threat: CVE-2026-84411 »</a>, Igal Zeifman, 4 octobre 2026 · éditeur de sécurité · EN</dd></div><div><dt>Résumé</dt><dd>Une faille notée 9,8/10 touche le service web d'administration de RouterOS. Sans être connecté, un attaquant peut, avec une seule requête HTTP, exécuter du code avec les droits root ou faire planter le routeur. Toutes les versions inférieures à 7.24 sont concernées, y compris toute la branche 6.x, qui ne sera pas corrigée.</dd></div><div><dt>Analyse</dt><dd>Les routeurs MikroTik sont très répandus et beaucoup exposent leur interface web sur Internet. Toutes les entreprises qui administrent leurs routeurs à distance sans VPN sont concernées.</dd></div><div><dt>Impact</dt><dd>Cette faille confirme l'intérêt de mon sujet : l'administration du routeur ne doit jamais être ouverte sur Internet, on doit y accéder à travers le VPN WireGuard. Elle rappelle aussi qu'il faut suivre les versions de près.</dd></div><div><dt>Action menée</dt><dd>Contrôler que l'interface web du routeur n'est pas accessible depuis Internet et limiter l'administration au réseau interne et au VPN. <span class="todo">à confirmer une fois faite</span></dd></div></dl>
         </article>
         <article class="card fiche fade" id="fiche-3">
-          <div class="fiche-top"><h3><span>Fiche n°3</span> · <span class="todo">Titre de l'article</span></h3><span class="pill">semaine du 16 nov. 2026</span></div>
-          <dl>
-            <div><dt>Titre et date</dt><dd><span class="todo">Titre de l'article + date de ma lecture</span></dd></div>
-            <div><dt>Source</dt><dd><span class="todo">Lien, auteur, type de source</span></dd></div>
-            <div><dt>Résumé</dt><dd><span class="todo">5 lignes maximum, avec mes propres mots</span></dd></div>
-            <div><dt>Analyse</dt><dd><span class="todo">Pourquoi c'est important, à qui cela s'applique</span></dd></div>
-            <div><dt>Impact</dt><dd><span class="todo">Conséquence sur mon travail, mon labo, mon parcours</span></dd></div>
-            <div><dt>Action menée</dt><dd><span class="todo">Test en labo, mise à jour, discussion, décision</span></dd></div>
-          </dl>
+          <div class="fiche-top"><h3><span>Fiche n°3</span> · WireGuard Easy 15.5 : les clés privées ne sont plus exposées</h3><span class="pills"><span class="pill lilac">Déploiement pratique</span><span class="pill">semaine du 16 nov. 2026</span></span></div>
+          <dl><div><dt>Titre et date</dt><dd>WireGuard Easy 15.5 : les clés privées ne sont plus exposées — lu la semaine du 16 nov. 2026</dd></div><div><dt>Source</dt><dd><a href="https://linuxiac.com/wireguard-easy-15-5-adds-amneziawg-3-1-support-security-fixes/" target="_blank" rel="noopener">Linuxiac — « WireGuard Easy 15.5 Adds AmneziaWG 3.1 Support, Security Fixes »</a>, Bobby Borisov, 24 octobre 2026 · presse spécialisée · EN</dd></div><div><dt>Résumé</dt><dd>WireGuard Easy est un outil open source qui gère un serveur WireGuard depuis une interface web. La version 15.5 ajoute la prise en charge d'AmneziaWG, un dérivé de WireGuard plus difficile à détecter, ainsi que des métriques de supervision. Elle corrige aussi des failles : l'API ne renvoie plus les clés privées des clients.</dd></div><div><dt>Analyse</dt><dd>L'article montre que la gestion des clés est le point sensible de WireGuard : si la clé privée d'un client fuit, n'importe qui peut se connecter à sa place. Cela concerne tous ceux qui utilisent un outil pour gérer leurs accès WireGuard.</dd></div><div><dt>Impact</dt><dd>Pour le déploiement chez Novxtel &amp; Euristel, la clé privée doit être générée et rester sur l'appareil du collaborateur ; seules les clés publiques sont échangées. Un appareil perdu = son peer supprimé immédiatement.</dd></div><div><dt>Action menée</dt><dd>Rédiger une mini-procédure « ajouter / révoquer un collaborateur nomade » qui inclut cette règle de gestion des clés. <span class="todo">à confirmer une fois faite</span></dd></div></dl>
         </article>
         <article class="card fiche fade" id="fiche-4">
-          <div class="fiche-top"><h3><span>Fiche n°4</span> · <span class="todo">Titre de l'article</span></h3><span class="pill">semaine du 23 nov. 2026</span></div>
-          <dl>
-            <div><dt>Titre et date</dt><dd><span class="todo">Titre de l'article + date de ma lecture</span></dd></div>
-            <div><dt>Source</dt><dd><span class="todo">Lien, auteur, type de source</span></dd></div>
-            <div><dt>Résumé</dt><dd><span class="todo">5 lignes maximum, avec mes propres mots</span></dd></div>
-            <div><dt>Analyse</dt><dd><span class="todo">Pourquoi c'est important, à qui cela s'applique</span></dd></div>
-            <div><dt>Impact</dt><dd><span class="todo">Conséquence sur mon travail, mon labo, mon parcours</span></dd></div>
-            <div><dt>Action menée</dt><dd><span class="todo">Test en labo, mise à jour, discussion, décision</span></dd></div>
-          </dl>
+          <div class="fiche-top"><h3><span>Fiche n°4</span> · <span class="todo">à venir</span></h3><span class="pills"><span class="pill lilac">Sécurité &amp; performances</span><span class="pill">semaine du 23 nov. 2026</span></span></div>
+          <dl><div><dt>Titre et date</dt><dd><span class="todo">Article à choisir cette semaine-là (axe prévu : Sécurité &amp; performances)</span></dd></div><div><dt>Source</dt><dd><span class="todo">Lien, auteur, type de source</span></dd></div><div><dt>Résumé</dt><dd><span class="todo">5 lignes maximum</span></dd></div><div><dt>Analyse</dt><dd><span class="todo">Pourquoi c'est important, à qui cela s'applique</span></dd></div><div><dt>Impact</dt><dd><span class="todo">Conséquence sur mon travail, mon labo, mon parcours</span></dd></div><div><dt>Action menée</dt><dd><span class="todo">Test en labo, mise à jour, discussion, décision</span></dd></div></dl>
         </article>
       </div>
     </section>
