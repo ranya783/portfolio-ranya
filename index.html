@@ -289,8 +289,11 @@
     .brick-head small { display: block; font-size: .75rem; font-weight: 600; color: var(--rose-dark); text-transform: uppercase; letter-spacing: .08em; }
     .brick-head h4 { color: var(--plum); font-size: 1.08rem; }
     .brick p, .brick li { font-size: .9rem; color: var(--muted); }
-    .shot { border: 1.5px dashed var(--peach); border-radius: 14px; background: var(--soft-peach); aspect-ratio: 16/9; display: grid; place-items: center; overflow: hidden; margin-top: auto; }
-    .shot img { width: 100%; height: 100%; object-fit: cover; }
+    .shot { border: 1.5px dashed var(--peach); border-radius: 14px; background: var(--soft-peach); min-height: 180px; display: grid; place-items: center; overflow: hidden; margin-top: auto; }
+    .shot:has(img) { border: 1px solid var(--line); background: #fff; min-height: 0; }
+    .shot a { display: block; width: 100%; }
+    .shot img { width: 100%; height: auto; display: block; transition: transform .3s; }
+    .shot a:hover img { transform: scale(1.02); }
     .shot-cap { font-size: .78rem; color: var(--muted); text-align: center; }
     .strategy div { display: grid; grid-template-columns: 240px 1fr; gap: 1rem; padding: .9rem 0; border-bottom: 1px dashed var(--line); }
     .strategy div:last-child { border-bottom: 0; }

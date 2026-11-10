@@ -289,8 +289,11 @@
     .brick-head small { display: block; font-size: .75rem; font-weight: 600; color: var(--rose-dark); text-transform: uppercase; letter-spacing: .08em; }
     .brick-head h4 { color: var(--plum); font-size: 1.08rem; }
     .brick p, .brick li { font-size: .9rem; color: var(--muted); }
-    .shot { border: 1.5px dashed var(--peach); border-radius: 14px; background: var(--soft-peach); aspect-ratio: 16/9; display: grid; place-items: center; overflow: hidden; margin-top: auto; }
-    .shot img { width: 100%; height: 100%; object-fit: cover; }
+    .shot { border: 1.5px dashed var(--peach); border-radius: 14px; background: var(--soft-peach); min-height: 180px; display: grid; place-items: center; overflow: hidden; margin-top: auto; }
+    .shot:has(img) { border: 1px solid var(--line); background: #fff; min-height: 0; }
+    .shot a { display: block; width: 100%; }
+    .shot img { width: 100%; height: auto; display: block; transition: transform .3s; }
+    .shot a:hover img { transform: scale(1.02); }
     .shot-cap { font-size: .78rem; color: var(--muted); text-align: center; }
     .strategy div { display: grid; grid-template-columns: 240px 1fr; gap: 1rem; padding: .9rem 0; border-bottom: 1px dashed var(--line); }
     .strategy div:last-child { border-bottom: 0; }
@@ -380,30 +383,29 @@
     <section class="section white" id="outils">
       <div class="container">
         <div class="title-wrap fade"><h2 class="title">Mes outils de veille</h2><p class="lead">Mon dispositif repose sur trois briques : collecter, alerter, conserver.</p></div>
-        <div class="todo-note fade">✿ Ajoute une capture datée par outil dans le dossier <code>docs/veille/</code> (sans données personnelles visibles).</div>
         <div class="grid-2" style="gap:24px">
           <article class="card brick hover-lift fade">
             <div class="brick-head"><span class="theme-num bg-rose">📥</span><div><small>Collecter</small><h4>Feedly</h4></div></div>
-            <ul class="list"><li>Mes 10 sources ajoutées en flux RSS</li><li>Rangées en dossiers : Institutionnel · Constructeur · Communauté · Presse</li></ul>
-            <div class="shot"><img src="docs/veille/capture-feedly.png" alt="Capture : Agrégateur avec les dossiers" onerror="this.outerHTML='&lt;span class=&quot;todo&quot;&gt;capture datée à ajouter&lt;/span&gt;'"></div>
-            <p class="shot-cap">Agrégateur avec les dossiers — <code>docs/veille/capture-feedly.png</code></p>
+            <ul class="list"><li>8 sources suivies en flux RSS</li><li>Rangées en 3 dossiers : Officiel (CERT-FR, ANSSI, annonces MikroTik) · Communauté (forum MikroTik, r/mikrotik, IT-Connect) · Presse (BleepingComputer, LeMagIT)</li></ul>
+            <div class="shot"><a href="docs/veille/capture-feedly.png" target="_blank" rel="noopener" title="Agrandir la capture"><img src="docs/veille/capture-feedly.png" alt="Capture : Agrégateur avec les sources classées par dossier" onerror="this.parentElement.outerHTML='&lt;span class=&quot;todo&quot;&gt;capture datée à ajouter&lt;/span&gt;'"></a></div>
+            <p class="shot-cap">Agrégateur avec les sources classées par dossier — <code>docs/veille/capture-feedly.png</code></p>
           </article>
           <article class="card brick hover-lift fade">
             <div class="brick-head"><span class="theme-num bg-lilac">🔔</span><div><small>Alerter</small><h4>Google Alerts</h4></div></div>
             <ul class="list"><li>« MikroTik WireGuard security » (EN)</li><li>« RouterOS v7 mise à jour » (FR)</li><li>« WireGuard vulnerability » (EN)</li></ul>
-            <div class="shot"><img src="docs/veille/capture-alertes.png" alt="Capture : Page de configuration des alertes" onerror="this.outerHTML='&lt;span class=&quot;todo&quot;&gt;capture datée à ajouter&lt;/span&gt;'"></div>
+            <div class="shot"><a href="docs/veille/capture-alertes.png" target="_blank" rel="noopener" title="Agrandir la capture"><img src="docs/veille/capture-alertes.png" alt="Capture : Page de configuration des alertes" onerror="this.parentElement.outerHTML='&lt;span class=&quot;todo&quot;&gt;capture datée à ajouter&lt;/span&gt;'"></a></div>
             <p class="shot-cap">Page de configuration des alertes — <code>docs/veille/capture-alertes.png</code></p>
           </article>
           <article class="card brick hover-lift fade">
-            <div class="brick-head"><span class="theme-num bg-peach">🗂️</span><div><small>Conserver</small><h4>Notion <span class="todo">ou Obsidian ?</span></h4></div></div>
-            <ul class="list"><li>Un espace « Veille » avec un modèle de fiche</li><li>Tags : #performances · #vulnérabilités · #déploiement</li></ul>
-            <div class="shot"><img src="docs/veille/capture-archivage.png" alt="Capture : Espace d'archivage avec les tags" onerror="this.outerHTML='&lt;span class=&quot;todo&quot;&gt;capture datée à ajouter&lt;/span&gt;'"></div>
+            <div class="brick-head"><span class="theme-num bg-peach">🗂️</span><div><small>Conserver</small><h4>Notion</h4></div></div>
+            <ul class="list"><li>Une base « Veille » avec un modèle de fiche (titre, source, résumé, analyse, impact, action)</li><li>Tags : #déploiement · #vulnérabilités · #sécurité · #clés · #constructeur</li></ul>
+            <div class="shot"><a href="docs/veille/capture-archivage.png" target="_blank" rel="noopener" title="Agrandir la capture"><img src="docs/veille/capture-archivage.png" alt="Capture : Espace d'archivage avec les tags" onerror="this.parentElement.outerHTML='&lt;span class=&quot;todo&quot;&gt;capture datée à ajouter&lt;/span&gt;'"></a></div>
             <p class="shot-cap">Espace d'archivage avec les tags — <code>docs/veille/capture-archivage.png</code></p>
           </article>
           <article class="card brick hover-lift fade">
             <div class="brick-head"><span class="theme-num bg-rose">⚙️</span><div><small>Automatiser (facultatif)</small><h4>Flux RSS → Discord</h4></div></div>
-            <ul class="list"><li>Les nouveautés des changelogs RouterOS arrivent sur mon canal Discord personnel</li></ul>
-            <div class="shot"><img src="docs/veille/capture-automatisation.png" alt="Capture : Automatisation en fonctionnement" onerror="this.outerHTML='&lt;span class=&quot;todo&quot;&gt;capture datée à ajouter&lt;/span&gt;'"></div>
+            <ul class="list"><li>Les annonces de nouvelles versions RouterOS arrivent sur mon canal Discord personnel <span class="todo">facultatif, pas encore mis en place</span></li></ul>
+            <div class="shot"><a href="docs/veille/capture-automatisation.png" target="_blank" rel="noopener" title="Agrandir la capture"><img src="docs/veille/capture-automatisation.png" alt="Capture : Automatisation en fonctionnement" onerror="this.parentElement.outerHTML='&lt;span class=&quot;todo&quot;&gt;capture datée à ajouter&lt;/span&gt;'"></a></div>
             <p class="shot-cap">Automatisation en fonctionnement — <code>docs/veille/capture-automatisation.png</code></p>
           </article></div>
       </div>
@@ -412,7 +414,7 @@
     <section class="section" id="strategie">
       <div class="container">
         <div class="title-wrap fade"><h2 class="title">Ma stratégie de veille</h2></div>
-        <div class="card fade" style="max-width:920px;margin:0 auto"><dl class="strategy"><div><dt>Quel est mon thème ?</dt><dd>L'intégration du protocole WireGuard sur MikroTik RouterOS v7 pour sécuriser les accès distants (VPN nomade).</dd></div><div><dt>Pourquoi ce thème ?</dt><dd>Il répond à un besoin réel de mes entreprises (Novxtel &amp; Euristel) avec le télétravail, il est relié à mon option SISR et à ma poursuite d'études en cybersécurité, et il évolue à chaque version de RouterOS.</dd></div><div><dt>Quelles sources principales ?</dt><dd>Les changelogs RouterOS et la documentation MikroTik, le CERT-FR, le forum MikroTik et BleepingComputer.</dd></div><div><dt>À quelle fréquence je consulte ?</dt><dd>20 minutes, 3 fois par semaine (lundi, mercredi et vendredi) sur Feedly, plus les alertes Google reçues par e-mail.</dd></div><div><dt>Comment je trie et retiens l'info ?</dt><dd>Je lis les titres dans Feedly, je garde seulement ce qui concerne WireGuard, RouterOS v7 ou la sécurité des VPN, et je l'archive dans Notion avec un tag par axe.</dd></div><div><dt>Comment je restitue ?</dt><dd>Une fiche de veille par semaine, publiée sur cette page, avec ce que j'en retiens et l'action que j'ai menée.</dd></div></dl></div>
+        <div class="card fade" style="max-width:920px;margin:0 auto"><dl class="strategy"><div><dt>Quel est mon thème ?</dt><dd>L'intégration du protocole WireGuard sur MikroTik RouterOS v7 pour sécuriser les accès distants (VPN nomade).</dd></div><div><dt>Pourquoi ce thème ?</dt><dd>Il répond à un besoin réel de mes entreprises (Novxtel &amp; Euristel) avec le télétravail, il est relié à mon option SISR et à ma poursuite d'études en cybersécurité, et il évolue à chaque version de RouterOS.</dd></div><div><dt>Quelles sources principales ?</dt><dd>Les changelogs RouterOS et la documentation MikroTik, le CERT-FR, le forum MikroTik et BleepingComputer.</dd></div><div><dt>À quelle fréquence je consulte ?</dt><dd>20 minutes, 3 fois par semaine (lundi, mercredi et vendredi) sur Feedly, plus les alertes Google reçues par e-mail.</dd></div><div><dt>Comment je trie et retiens l'info ?</dt><dd>Je lis les titres dans Feedly, je garde seulement ce qui concerne WireGuard, RouterOS v7 ou la sécurité des VPN, et je l'archive dans ma base Notion « Veille » avec des tags (#déploiement, #vulnérabilités…).</dd></div><div><dt>Comment je restitue ?</dt><dd>Une fiche de veille par semaine, publiée sur cette page, avec ce que j'en retiens et l'action que j'ai menée.</dd></div></dl></div>
       </div>
     </section>
 
